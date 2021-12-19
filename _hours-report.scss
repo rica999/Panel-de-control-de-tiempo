@@ -1,0 +1,96 @@
+@mixin image ($color){
+    background-color: $color;
+}
+@mixin cardhours (){
+    .hours-image{
+        overflow: hidden;
+        display: grid;
+        justify-content: end;
+        padding-right: 10px;
+        height: 30px;
+        img{
+            position: relative;
+            bottom: 5px;
+            width: 50px;
+        }
+    }
+    .hours-content{
+        background-color: hsl(235, 46%, 20%);
+        border-radius: 13px;
+        color: white;
+        font-family: 'Rubik', sans-serif;
+        h1{
+            font-weight: lighter;
+            padding: 10px 0px 5px;
+            margin: 5px 20px 0px;
+        }
+        ul{
+            margin: 0px 20px;
+            padding: 16px 0px 0px;
+            list-style: none;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            li:first-child{
+                justify-self: start;
+                font-size: 14px;
+                align-self: center;
+            }
+            li:last-child{
+                justify-self: end;
+                margin-bottom: 7px;
+            }
+        }
+        p{
+            padding: 0px 0px 30px;
+            margin: 0px 20px;
+            color:hsl(236, 100%, 87%);
+            font-size: 12px;
+        }
+    }
+}
+.hours-report{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-gap:20px;
+}
+
+.hours-work{
+    @include image(hsl(15, 100%, 70%));
+    border-radius: 15px;
+    width: 180px;
+    @include cardhours();
+}
+.hours-play{
+    @include image(hsl(195, 74%, 62%));
+    border-radius: 15px;
+    width: 180px;
+    @include cardhours();
+}
+.hours-study{
+    @include image(hsl(348, 100%, 68%));
+    border-radius: 15px;
+    width: 180px;
+    @include cardhours();
+}
+.hours-exercise{
+    @include image(hsl(145, 58%, 55%));
+    border-radius: 15px;
+    width: 180px;
+    @include cardhours();
+}
+.hours-social{
+    @include image(hsl(264, 64%, 52%));
+    border-radius: 15px;
+    width: 180px;
+    @include cardhours();
+}
+.hours-self{
+    @include image(hsl(43, 84%, 65%));
+    border-radius: 15px;
+    width: 180px;
+    @include cardhours();
+}
+.hours-content:hover{
+    background-color: hsl(236, 34%, 26%);
+    cursor: pointer;
+}
