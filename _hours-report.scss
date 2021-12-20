@@ -94,3 +94,15 @@
     background-color: hsl(236, 34%, 26%);
     cursor: pointer;
 }
+
+@media screen and (max-width:850px) {
+    .hours-report{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(6,1fr);
+        grid-gap:20px;
+    }
+    .hours-work,.hours-play,.hours-study,.hours-exercise,.hours-social,.hours-self{
+        width: 100%;
+    }
+}

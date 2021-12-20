@@ -50,4 +50,30 @@
     }
 }
 
+@media screen and (max-width:850px){
+    .author-report{
+        width: 100%;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        .author{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            justify-items: center;
+            align-items: center;
+            h1{
+                font-size: 23px;
+            }
+            img{
+                width: 60px;
+            }
+        }
+        .time{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            justify-items: center;
+            height: 20px;
+        }
+    }
+}
+
 

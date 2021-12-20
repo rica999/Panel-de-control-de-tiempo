@@ -54,6 +54,38 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 850px) {
+  .author-report {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .author-report .author {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 2fr;
+        grid-template-columns: 1fr 2fr;
+    justify-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .author-report .author h1 {
+    font-size: 23px;
+  }
+  .author-report .author img {
+    width: 60px;
+  }
+  .author-report .time {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    height: 20px;
+  }
+}
+
 .hours-report {
   display: -ms-grid;
   display: grid;
@@ -475,6 +507,21 @@
   cursor: pointer;
 }
 
+@media screen and (max-width: 850px) {
+  .hours-report {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: (1fr)[6];
+        grid-template-rows: repeat(6, 1fr);
+    grid-gap: 20px;
+  }
+  .hours-work, .hours-play, .hours-study, .hours-exercise, .hours-social, .hours-self {
+    width: 100%;
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -504,5 +551,18 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+@media screen and (max-width: 850px) {
+  .container .container-data {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 300px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
